@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Greetings {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        // Flag to control the loop
+        boolean isMatch = false;
+
+        // Loop until the entered string matches the reference string
+        while (!isMatch) {
+            System.out.println("Solve the clue:");
+            System.out.print("I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I? ");
+            String name = scanner.nextLine();
+
+            // If-else statement
+            if (name.equals("echo")) { // Use .equals() for string comparison
+                System.out.println("Congrats, you're one step closer to escaping the room!");
+                isMatch = true; // Exit the loop
+            } else {
+                System.out.println("Try again.");
+            }
+        }
+
+        // Close the scanner
+        scanner.close();
+    }
+}
